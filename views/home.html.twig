@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find and replace</title>
+  </head>
+  <body>
+    <h1>Find and Replace</h1>
+
+    {% block content %}
+    <form action='/find' method='post'>
+      <label for='sample'>Message</label>
+      <input id='sample' name='sample' type='text'>
+
+      <label for='search'>Find</label>
+      <input id='search' name='search' type='text'>
+
+      <label for='replacement'>Replace</label>
+      <input id='replacement' name='replacement' type='text'>
+
+      <button type='submit'>Find and replace</button>
+    </form>
+    {% endblock %}
+  </body>
+</html>
