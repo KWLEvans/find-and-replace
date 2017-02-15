@@ -47,5 +47,20 @@ class FindAndReplaceTest extends PHPUnit_Framework_TestCase
         //Assert
         $this->assertEquals("hello universe universe", $result);
     }
+
+    function test_execute_partials()
+    {
+        //Arrange
+        $test_FindAndReplace = new FindAndReplace;
+        $input1 = "I'm walking my cat to the cathedral";
+        $input2 = "cat";
+        $input3 = "dog";
+
+        //Act
+        $result = $test_FindAndReplace->execute($input1, $input2, $input3);
+
+        //Assert
+        $this->assertEquals("I'm walking my dog to the doghedral", $result);
+    }
 }
 ?>
